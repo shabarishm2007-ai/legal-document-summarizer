@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Plain Papers – property documents in simple words</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f6f8;--card:rgba(255,255,255,.82);--line:rgba(30,55,80,.2);--ink:#10202f;--mute:#4d6070;--acc:#0b6e5f;--warn:#9a5b00;--warnbg:#fff3d9;--okbg:#dff3ee;--btn:#10202f;--btnt:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1722;--card:rgba(19,34,48,.82);--line:rgba(200,220,240,.22);--ink:#eaf1f7;--mute:#a3b5c5;--acc:#5fd0b8;--warn:#f0c26b;--warnbg:#3a2d12;--okbg:#10382f;--btn:#eaf1f7;--btnt:#0c1722;color-scheme:dark}}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;overflow-x:hidden;background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible",-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.5}
+body.big{font-size:21px}
+.court{position:fixed;left:0;right:0;bottom:0;width:100%;height:70vh;z-index:0;pointer-events:none}
+.court *{fill:none;stroke:var(--line);stroke-width:1.5;vector-effect:non-scaling-stroke}
+main{position:relative;z-index:1;max-width:720px;margin:0 auto;padding:28px 18px 150px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:34px}
+.brand{font-weight:700;font-size:19px}
+.tb{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:8px 14px;font:inherit;font-size:15px;cursor:pointer}
+h1{font-size:clamp(34px,8vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 12px}
+.lead{color:var(--mute);margin:0 0 26px;max-width:36ch}
+h2.s{font-size:19px;margin:26px 0 10px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.chip{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:14px;padding:11px 16px;font:inherit;font-size:16px;cursor:pointer}
+.chip[aria-pressed=true]{border-color:var(--acc);color:var(--acc);font-weight:700}
+.prog{display:flex;align-items:center;gap:12px;color:var(--mute);font-size:15px;margin:22px 0 10px}
+.bar{flex:1;height:6px;background:var(--line);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:var(--acc);transition:width .4s}
+ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
+li{display:flex;align-items:center;gap:14px;padding:15px 16px;background:var(--card);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1.5px solid var(--line);border-radius:20px;cursor:pointer;min-width:0}
+li[aria-selected=true]{border-color:var(--acc)}
+.dot{flex:none;width:28px;height:28px;border-radius:50%;border:2px solid var(--mute);display:grid;place-items:center;color:transparent;font-weight:700}
+li.done .dot{background:var(--acc);border-color:var(--acc);color:#fff}
+.t{flex:1;min-width:0}.t b{display:block}.t span{display:block;color:var(--mute);font-size:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tag{flex:none;font-size:13px;color:var(--mute);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.go{display:block;width:100%;margin-top:20px;border:0;border-radius:16px;padding:17px;font:700 18px inherit;font-family:inherit;background:var(--btn);color:var(--btnt);cursor:pointer}
+.go:disabled{opacity:.35;cursor:not-allowed}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.res{display:none;margin-top:26px}
+.big1{background:var(--card);border:1.5px solid var(--acc);border-radius:22px;padding:20px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.big1 h2{margin:0 0 6px;font-size:21px}
+.card{margin-top:12px;background:var(--card);border:1.5px solid var(--line);border-radius:22px;padding:18px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.card h3{margin:0 0 8px;font-size:19px}
+.lab{font-weight:700;color:var(--acc)}
+.card p{margin:0 0 8px}
+.chk{background:var(--warnbg);color:var(--warn);border-radius:14px;padding:10px 14px;margin-top:6px}
+.chk b{color:inherit}
+.miss{margin-top:12px;background:var(--okbg);border-radius:18px;padding:14px 16px}
+.q{display:flex;gap:12px;align-items:flex-start;padding:13px 16px;margin-top:10px;background:var(--card);border:1.5px solid var(--line);border-radius:18px;cursor:pointer}.q input{width:24px;height:24px;flex:none;margin-top:2px;accent-color:var(--acc)}
+.verdict{margin-top:14px;border-radius:22px;padding:20px}.verdict h2{margin:0 0 6px;font-size:26px;letter-spacing:-.02em}.verdict p{margin:0 0 8px}
+.v-ok{background:var(--okbg);color:var(--acc)}.v-mid{background:var(--warnbg);color:var(--warn)}.v-bad{background:#fde3e1;color:#8c1d18}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .v-bad{background:#40181a;color:#ffb3ad}}
+.note{color:var(--mute);font-size:14px;margin-top:16px}
+.fab{position:fixed;z-index:5;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));width:68px;height:68px;border-radius:50%;border:2px solid var(--acc);background:var(--card);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);color:var(--acc);display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 30px rgba(0,0,0,.2)}
+.scrim{position:fixed;inset:0;z-index:8;background:rgba(5,10,16,.5);opacity:0;pointer-events:none;transition:opacity .25s}
+.sheet{position:fixed;z-index:9;left:0;right:0;bottom:0;margin:0 auto;max-width:520px;padding:12px 18px calc(22px + env(safe-area-inset-bottom,0px));border-radius:26px 26px 0 0;background:var(--bg);border:1px solid var(--line);transform:translateY(105%);transition:transform .3s}
+body.open .scrim{opacity:1;pointer-events:auto}body.open .sheet{transform:none}
+.grab{width:40px;height:4px;border-radius:4px;background:var(--line);margin:0 auto 14px}
+.sheet h3{margin:0 0 12px;font-size:20px}
+.act{display:flex;align-items:center;gap:14px;width:100%;text-align:left;padding:16px;margin-bottom:10px;border:1.5px solid var(--line);border-radius:18px;background:var(--card);color:var(--ink);font:700 17px inherit;font-family:inherit;cursor:pointer}
+.act small{display:block;font-weight:400;color:var(--mute);font-size:14px}
+.toast{position:fixed;z-index:12;left:50%;top:calc(16px + env(safe-area-inset-top,0px));transform:translate(-50%,-150%);background:var(--btn);color:var(--btnt);padding:10px 18px;border-radius:999px;font-size:15px;transition:transform .3s}.toast.show{transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<svg class="court" viewBox="0 0 900 520" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+<path d="M120 190 L450 40 L780 190 Z"/><path d="M180 178 L450 58 L720 178"/><circle cx="450" cy="130" r="26"/>
+<rect x="100" y="190" width="700" height="26"/><rect x="100" y="216" width="700" height="10"/>
+<rect x="140" y="226" width="40" height="214"/><rect x="236" y="226" width="40" height="214"/><rect x="332" y="226" width="40" height="214"/><rect x="528" y="226" width="40" height="214"/><rect x="624" y="226" width="40" height="214"/><rect x="720" y="226" width="40" height="214"/>
+<rect x="404" y="260" width="92" height="180"/><path d="M404 260 Q450 215 496 260"/>
+<rect x="110" y="440" width="680" height="16"/><rect x="90" y="456" width="720" height="16"/><rect x="70" y="472" width="760" height="16"/><rect x="50" y="488" width="800" height="40"/></svg>
+
+<main>
+<div class="top"><span class="brand">Plain Papers</span><div class="row"><button class="tb" id="sz" aria-pressed="false">Bigger text</button></div></div>
+<h1>Understand your property papers.</h1>
+<p class="lead">Add your documents. We explain each one in simple words.</p>
+
+<h2 class="s">1. What are you buying?</h2>
+<div class="row" role="group" aria-label="Property type">
+<button class="chip" aria-pressed="true" data-p="flat">Flat</button><button class="chip" aria-pressed="false" data-p="plot">Plot of land</button><button class="chip" aria-pressed="false" data-p="house">House</button></div>
+
+<h2 class="s">2. Add your documents</h2>
+<div class="prog"><span id="count"></span><div class="bar"><i id="fill"></i></div></div>
+<ul id="list" role="listbox" aria-label="Documents"></ul>
+<h2 class="s">3. Two quick questions</h2>
+<label class="q"><input type="checkbox" id="c1"><span>The names, price and address are the same on all my papers.</span></label>
+<label class="q"><input type="checkbox" id="c2"><span>The encumbrance certificate shows no loan and no court case.</span></label>
+<button class="go" id="go" disabled>Explain my documents</button>
+
+<div class="res" id="res" aria-live="polite">
+<div class="big1"><h2>In short</h2><p id="short"></p>
+<button class="tb" id="speak">Read aloud</button></div>
+<div id="cards"></div><div class="miss" id="miss"></div>
+<div class="verdict" id="verdict"></div>
+<p class="note">This is a prototype. The explanations are written in advance for each type of document. They are not read from your file yet. This is general information and not legal advice. Show your papers to a lawyer before you pay.</p>
+</div>
+</main>
+
+<button class="fab" id="fab" aria-label="Add a document with camera or file"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h3l1.6-2.4h6.8L17 8h3v11H4z"/><circle cx="12" cy="13" r="3.6"/></svg></button>
+<div class="scrim" id="scrim"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Add document"><div class="grab"></div><h3 id="shT">Add document</h3>
+<button class="act" id="devBtn"><span>Choose a file from my phone<small>PDF or photo</small></span></button>
+<button class="act" id="camBtn"><span>Take a photo now<small>Opens the camera</small></span></button></div>
+<input type="file" id="fDev" accept="application/pdf,image/*" hidden>
+<input type="file" id="fCam" accept="image/*" capture="environment" hidden>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+const D={
+flat:["Sale deed","Encumbrance certificate","Khata certificate and extract","Property tax receipt","Approved building plan","Occupancy certificate","Society no-objection letter"],
+plot:["Sale deed","Encumbrance certificate","Khata certificate and extract","Property tax receipt","Layout approval","Survey sketch","Conversion order"],
+house:["Sale deed","Encumbrance certificate","Khata certificate and extract","Property tax receipt","Approved building plan","Completion certificate","Utility bills"]};
+const X={
+"Sale deed":["The main paper that proves the owner sold the property.","It tells you who sold, who bought, how much money was paid, and which property it is.","The names, price and address must match all your other papers."],
+"Encumbrance certificate":["A government paper that shows if the property has a loan or a court case on it.","If it is clean, nobody else has a claim on the property.","It should cover many years. 30 years is common. Ask for a new one before you pay."],
+"Khata certificate and extract":["A city record of who owns the property and who pays its tax.","It shows the city accepts the seller as the owner.","The owner name must be the seller’s name. Ask if it is an A-Khata or B-Khata."],
+"Property tax receipt":["Proof that the yearly property tax is paid.","If the tax is not paid, the dues can become your problem.","Look for the latest year and a balance of zero."],
+"Approved building plan":["The drawing the city approved before the building was made.","It shows that the building was allowed to be built.","Check that the real building matches the plan: same floors, same size."],
+"Occupancy certificate":["A city letter that says the building is finished and safe to live in.","Without it, getting water, electricity or a bank loan can be hard.","Make sure it is for this building, not only for another one nearby."],
+"Society no-objection letter":["A letter from the residents’ group saying they agree to the sale.","It shows the seller has paid the monthly maintenance bills.","Check the date and that there are no dues left."],
+"Layout approval":["The city’s approval of the whole plot area, with roads and sites marked.","It shows your plot is in an approved area.","Find your plot number on the map."],
+"Survey sketch":["A drawing that shows the exact edges and size of the land.","It tells you where your land starts and ends.","Check the size and the survey number match the sale deed."],
+"Conversion order":["A paper that allows farm land to be used for homes.","Without it, building on the land may be illegal.","Ask if the land was ever farm land. If yes, this paper is a must."],
+"Completion certificate":["A city letter that says the house was built as approved.","It shows the house follows the rules.","Check that the house matches the approved plan."],
+"Utility bills":["Recent electricity or water bills.","They show that the services work and bills are paid.","Look for zero dues in the latest month."]};
+let kind="flat",act=0,F={};const $=s=>document.querySelector(s),L=$("#list");
+function nm(f){return /^\d{8,}\./.test(f)?"Photo added":f}
+function render(){
+ L.innerHTML="";const d=D[kind];
+ d.forEach((t,i)=>{const f=F[kind+i],li=document.createElement("li");li.tabIndex=0;li.setAttribute("role","option");li.setAttribute("aria-selected",i===act);if(f)li.className="done";
+ li.innerHTML=`<span class="dot">✓</span><div class="t"><b>${t}</b><span>${f?nm(f):"Not added yet"}</span></div><span class="tag">${f?"Added":"Needed"}</span>`;
+ li.onclick=()=>{act=i;render()};li.onkeydown=e=>{if(e.key==="Enter"||e.key===" "){e.preventDefault();act=i;render()}};L.appendChild(li)});
+ const n=d.filter((_,i)=>F[kind+i]).length;$("#count").textContent=n+" of "+d.length+" added";$("#fill").style.width=n/d.length*100+"%";$("#go").disabled=!n;
+}
+document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{document.querySelectorAll(".chip").forEach(o=>o.setAttribute("aria-pressed",o===c));kind=c.dataset.p;act=0;$("#res").style.display="none";render()});
+$("#sz").onclick=e=>{const b=document.body.classList.toggle("big");e.target.setAttribute("aria-pressed",b);e.target.textContent=b?"Normal text":"Bigger text"};
+const op=()=>{$("#shT").textContent="Add: "+D[kind][act];document.body.classList.add("open")},cl=()=>document.body.classList.remove("open");
+$("#fab").onclick=op;$("#scrim").onclick=cl;addEventListener("keydown",e=>{if(e.key==="Escape")cl()});
+$("#devBtn").onclick=()=>$("#fDev").click();$("#camBtn").onclick=()=>$("#fCam").click();
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),2200)}
+function got(e){const f=e.target.files[0];if(!f)return;F[kind+act]=f.name;cl();toast(D[kind][act]+" added");const nx=D[kind].findIndex((_,i)=>!F[kind+i]);if(nx>-1)act=nx;e.target.value="";render()}
+$("#fDev").onchange=got;$("#fCam").onchange=got;
+$("#go").onclick=()=>{
+ const d=D[kind],have=d.filter((_,i)=>F[kind+i]),miss=d.filter((_,i)=>!F[kind+i]);
+ $("#short").textContent=have.length+" of "+d.length+" papers added. Together, these papers should show who owns the property, that it has no loans or cases, and that the taxes are paid. "+(miss.length?"Some papers are still missing, so you cannot be sure yet.":"You have all the papers. Now check that the names and numbers match on every paper.");
+ $("#cards").innerHTML=have.map(t=>`<div class="card"><h3>${t}</h3><p><span class="lab">What it is: </span>${X[t][0]}</p><p><span class="lab">Why it matters: </span>${X[t][1]}</p><div class="chk"><b>Check this: </b>${X[t][2]}</div></div>`).join("");
+ $("#miss").innerHTML=miss.length?"<b>Still missing:</b> "+miss.join(", ")+". Ask the seller for these before you pay.":"<b>Nothing is missing.</b> Good job.";
+ const E={flat:["Sale deed","Encumbrance certificate","Khata certificate and extract","Approved building plan","Occupancy certificate"],plot:["Sale deed","Encumbrance certificate","Khata certificate and extract","Layout approval","Conversion order"],house:["Sale deed","Encumbrance certificate","Khata certificate and extract","Approved building plan","Completion certificate"]};
+ const need=E[kind].filter(t=>!F[kind+d.indexOf(t)]),ok1=$("#c1").checked,ok2=$("#c2").checked;let c,h,p;
+ if(need.length){c="v-bad";h="Looks ILLEGAL or unsafe";p="These key papers are missing: "+need.join(", ")+". Without them, you cannot prove the property is legal. Do not pay any money yet."}
+ else if(!ok1||!ok2){c="v-mid";h="Could be LEGAL, but not proven";p="All key papers are added. Answer “yes” to the two quick questions only after you have checked them. If a name or number does not match, or there is a loan or case, treat the property as unsafe."}
+ else{c="v-ok";h="Looks LEGAL on paper";p="All key papers are added, the details match, and no loan or case is shown. This is a good sign."}
+ $("#verdict").className="verdict "+c;$("#verdict").innerHTML=`<h2>${h}</h2><p>${p}</p><p><b>How we decided:</b> we only check that the key papers are there and that your two answers are yes. We cannot see inside your files yet. Only a lawyer can say for sure that a property is legal.</p>`;
+ $("#res").style.display="block";$("#res").scrollIntoView({behavior:"smooth"});
+};
+$("#speak").onclick=()=>{if(!window.speechSynthesis)return;speechSynthesis.cancel();speechSynthesis.speak(new SpeechSynthesisUtterance($("#short").textContent+" "+[...document.querySelectorAll(".card")].map(c=>c.innerText).join(". ")))};
+render();
+</script>
+</body>
+</html>
